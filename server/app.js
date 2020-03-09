@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.port || 8080;
+const PORT = process.env.PORT || 8080;
 const axios = require("axios");
 const path = require("path");
 app.use(express.urlencoded({extended:true}));

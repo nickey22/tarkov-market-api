@@ -7,6 +7,7 @@ class App extends React.Component {
     items: null
   }
   async componentDidMount(){
+    console.log('hello world')
     const data = await fetch("/api/test");
     const res = await data.json();
     const items =res.tarkovRes.result.data.allDataJson.nodes;
