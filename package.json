@@ -12,8 +12,9 @@
   "devDependencies": {},
   "scripts": {
     "start":"cd server && npm install && node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build" ,
-    "dev": "concurrently \"nodemon server/app.js -L\" \"cd client && npm run start\""
+    "dev": "concurrently \"nodemon server/app.js -L\" \"cd client && npm run start\"",
+    "heroku-postbuild": "npm i core-util-is && cd client && npm install && npm run build"
+
   },
   "keywords": [],
   "author": "",
