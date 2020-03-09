@@ -13,7 +13,7 @@ app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 })
 
-app.get('/api/test',async (req,res)=>{
+app.get('/api/getItems',async (req,res)=>{
     const tarkovAPI = "https://eft-loot.com/page-data/index/page-data.json";
     console.log('fetching tarkov data')
     try{

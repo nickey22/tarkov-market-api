@@ -7,8 +7,7 @@ class App extends React.Component {
     items: null
   }
   async componentDidMount(){
-    console.log('hello world')
-    const data = await fetch("/api/test");
+    const data = await fetch("/api/getItems");
     const res = await data.json();
     const items =res.tarkovRes.result.data.allDataJson.nodes;
     this.setState({ items });
@@ -36,6 +35,9 @@ class App extends React.Component {
     
     return (
       <div className="App" id = "App">
+        <div className = 'dont-sue'>
+          <p><span className = 'big'>NZ</span>'s makeshift tarkov api <small>please dont sue me</small></p>
+        </div>
         <div className = 'filter-bar'>
           <input placeholder = "Search Items" id = 'filterItems' type = 'text'onChange = {this.onInputChange}/>
         </div>

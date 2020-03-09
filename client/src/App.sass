@@ -1,22 +1,32 @@
 $tarkovYellow: #978665
 $tarkovBlack: black
+$tarkovBlue: #d0e7ff
 $tarkovChrome: #161616
+=backgroundGradient
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 #App
     background-color: $tarkovChrome
     min-height: 100vh
     color: white
+    .dont-sue
+        span
+            font-size: 50px
+        small
+            font-size: 10px
     .filter-bar
         padding-top: 20px
         input
             background-color: transparent
             border: none
-            border: 1px solid $tarkovYellow
+            border: 1px solid $tarkovBlue
             border-radius: 5px
             padding: 10px 30px
-            color: $tarkovYellow
+            color: $tarkovBlue
             padding-left: 15px
             &::placeholder
-                color: $tarkovYellow
+                color: $tarkovBlue
     p
         margin: 0px
         padding: 15px 0px
@@ -28,13 +38,17 @@ $tarkovChrome: #161616
         .table-headers
             display: flex
             justify-content: space-between
-            background-color: $tarkovYellow
-            border: 1px solid $tarkovBlack
+            +backgroundGradient
+            
+            border: 1px solid white
             margin-bottom: 20px
             p
                 width: 25%
                 text-align: center
         .item
+
+            +backgroundGradient
+            
             display: flex
             justify-content: space-between
             border: 1px solid white
